@@ -1,0 +1,349 @@
+--create insurance-management database---
+use insurance-management
+
+--agent table
+
+db.createCollection("agent")
+
+db.agent.insertOne(
+    {
+    "Agent_code":"234abc231", 
+    "Agent_name":"Rishabh", 
+    "DOB":"1966-02-21", 
+    "Address":"B1/13,Maheshnagar,Goregaon(west)", 
+    "Pincode":400104,
+    "Branch":"mumbai", 
+    "Contact_Num":9326765878
+    }
+)
+
+db.agent.insertOne(
+    {
+        "Agent_code":'235abc232', 
+        "Agent_name":'Kuldeep', 
+        "DOB":'1996-05-28', 
+        "Address":'Mahavir Nagar,kandivali(west)', 
+        "Pincode":400101, 
+        "Branch":'gujrat', 
+        "Contact_Num":9819983261,
+
+    }
+)
+db.agent.insertOne(
+    {
+        "Agent_code":'236abc233', 
+        "Agent_name":'Gautam', 
+        "DOB":'1976-22-27', 
+        "Address":'A304,JK Apartments,Andheri(west)', 
+        "Pincode":400112, 
+        "Branch":'tamil nadu', 
+        "Contact_Num":8424055111,
+    }
+)
+db.agent.insertOne(
+    {
+        "Agent_code":'237abc234', 
+        "Agent_name":'Natasha', 
+        "DOB":'1986-12-26', 
+        "Address":'B1909,Astra Apartments,Santacruz(east)', 
+        "Pincode":400112, 
+        "Branch":'mumbai', 
+        "Contact_Num":9820085643,
+    }
+)
+db.agent.insertOne(
+    {
+       "Agent_code":'238abc235', 
+        "Agent_name":'Hermoine', 
+        "DOB":'1956-08-25', 
+        "Address":'A2203,Sunflower Heights,Bandra(east)', 
+        "Pincode":400112, 
+        "Branch":'delhi', 
+        "Contact_Num":9899985893,
+    }
+)
+
+
+
+
+--customer table--
+db.createCollection("customer")
+db.customer.insertOne(
+    {
+        "Customer_Num":10002, 
+        "First_Name":"Aadit", 
+        "Middle_Name":"Akash", 
+        "Last_Name":"Chopda", 
+        "Gender":"male", 
+        "DOB":"1989-01-23", 
+        "Address":"A101,Sapphire Heights,Bandra(east)", 
+        "Pincode":400064, 
+        "Contact_Number":9878654321, 
+        "Mother_Name":"Preeti", 
+        "Mother_Status":"A", 
+        "Father_Name":"Akash", 
+        "Father_Status":"A", 
+        "Marital_status":"Yes", 
+        "Spouse":"xyz",
+    }
+)
+db.customer.insertOne(
+    {
+        "Customer_Num":13245, 
+        "First_Name":"Heet", 
+        "Middle_Name":"Vansh", 
+        "Last_Name":"Shah", 
+        "Gender":"male", 
+        "DOB":"1990-11-17", 
+        "Address":"B24,Panchsheel Gardens,Kandivali(west)", 
+        "Pincode":400067, 
+        "Contact_Number":9856234178, 
+        "Mother_Name":"Subhadra", 
+        "Mother_Status":"A", 
+        "Father_Name":"Vansh", 
+        "Father_Status":"A", 
+        "Marital_status":"No", 
+        "Spouse":"xyz",
+    }
+)
+db.customer.insertOne(
+    {
+        "Customer_Num":15267, 
+        "First_Name":"Kulin", 
+        "Middle_Name":"Jagdeep", 
+        "Last_Name":"Goyal", 
+        "Gender":"male", 
+        "DOB":"1996-07-18", 
+        "Address":"A21,Ashok Building,Kandivali(east)", 
+        "Pincode":400069, 
+        "Contact_Number":9819753399, 
+        "Mother_Name":"Sudha", 
+        "Mother_Status":"A", 
+        "Father_Name":"Akash", 
+        "Father_Status":"A", 
+        "Marital_status":"Yes", 
+        "Spouse":"xyz",
+    }
+)
+db.customer.insertOne(
+    {
+        "Customer_Num":20198, 
+        "First_Name":"Rajul", 
+        "Middle_Name":"Vishal", 
+        "Last_Name":"Choksi", 
+        "Gender":"female", 
+        "DOB":"1980-02-21", 
+        "Address":"11,Le Jardine CHSL,Grant Road(west)", 
+        "Pincode":400002, 
+        "Contact_Number":9833154144, 
+        "Mother_Name":"Lata", 
+        "Mother_Status":"A", 
+        "Father_Name":"Jayanti", 
+        "Father_Status":"A", 
+        "Marital_status":"Yes", 
+        "Spouse":"xyz",
+    }
+)
+db.customer.insertOne(
+    {
+        "Customer_Num":10002, 
+        "First_Name":"Rosesh", 
+        "Middle_Name":"Indrvadhan", 
+        "Last_Name":"Sarabhai", 
+        "Gender":"male", 
+        "DOB":"1993-09-06", 
+        "Address":"Sarabhai Apartments,goregaon(west)", 
+        "Pincode":400054, 
+        "Contact_Number":9879764343, 
+        "Mother_Name":"Maya", 
+        "Mother_Status":"A", 
+        "Father_Name":"Indravadhan", 
+        "Father_Status":"A", 
+        "Marital_status":"No", 
+        "Spouse":"xyz",
+    }
+)
+--paid premium--
+db.createCollection("paid_premium")
+db.paid_premium.insertOne(
+    {
+       "Receipt_Num":325256815, 
+       "Receipt_Date":2018-10-31, 
+       "Policy_Num":123564789,
+    }
+)
+db.paid_premium.insertOne(
+    {
+       "Receipt_Num":678432201, 
+       "Receipt_Date":2010-01-11, 
+       "Policy_Num":637627352,
+    }
+)
+db.paid_premium.insertOne(
+    {
+       "Receipt_Num":166413844, 
+       "Receipt_Date":2003-06-04, 
+       "Policy_Num":987561684,
+    }
+)
+db.paid_premium.insertOne(
+    {
+       "Receipt_Num":657548115, 
+       "Receipt_Date":2020-05-12, 
+       "Policy_Num":264484551,
+    }
+)
+db.paid_premium.insertOne(
+    {
+       "Receipt_Num":658475124, 
+       "Receipt_Date":2017-09-23, 
+       "Policy_Num":648415574,
+    }
+)
+
+--policy data table--
+db.createCollection("policy_data")
+db.policy_data.insertOne(
+    {
+    "Policy_Num":123564789, 
+    "Customer_Num":10002, 
+    "Agent_code":'234abc231', 
+    "DOC":'2007-06-20', 
+    "Product":'Jeevan Lakshya', 
+    "Sum_Assured":450000, 
+    "Pay_Period":35, 
+    "Ins_Period":80,
+    }
+)
+db.policy_data.insertOne(
+    {
+    "Policy_Num":284049583, 
+    "Customer_Num":10003, 
+    "Agent_code":'236abc233', 
+    "DOC":'2018-10-02', 
+    "Product":'Jeevan Labh', 
+    "Sum_Assured":35000, 
+    "Pay_Period":5, 
+    "Ins_Period":10,
+    }
+)
+db.policy_data.insertOne(
+    {
+    "Policy_Num":648471563, 
+    "Customer_Num":10004, 
+    "Agent_code":'238abc235', 
+    "DOC":'2013-01-07', 
+    "Product":'Jeevan Anand', 
+    "Sum_Assured":1500000, 
+    "Pay_Period":100, 
+    "Ins_Period":150,
+    }
+)
+db.policy_data.insertOne(
+    {
+    "Policy_Num":235784621, 
+    "Customer_Num":10005, 
+    "Agent_code":'238abc237', 
+    "DOC":'2008-12-17', 
+    "Product":'Jeevan Labh', 
+    "Sum_Assured":55000, 
+    "Pay_Period":7, 
+    "Ins_Period":12,
+    }
+)
+db.policy_data.insertOne(
+    {
+    "Policy_Num":125486355, 
+    "Customer_Num":10006, 
+    "Agent_code":'232abc239', 
+    "DOC":'1990-11-30', 
+    "Product":'Jeevan Lakshya', 
+    "Sum_Assured":950000, 
+    "Pay_Period":75, 
+    "Ins_Period":120,
+    }
+)
+--premium table--
+db.createCollection("premium")
+db.premium.insertOne(
+    {
+        "Policy_Num":123564789, 
+        "Premium":3500, 
+        "Mode":'YLY', 
+        "Last_date":'2018-12-01'
+
+    }
+)
+db.premium.insertOne(
+    {
+        "Policy_Num":284049583, 
+        "Premium":600, 
+        "Mode":'MLY', 
+        "Last_date":'2018-12-01'
+
+    }
+)
+db.premium.insertOne(
+    {
+        "Policy_Num":486551278, 
+        "Premium":1200, 
+        "Mode":'MLY', 
+        "Last_date":'2019-12-01'
+
+    }
+)
+db.premium.insertOne(
+    {
+        "Policy_Num":512548653, 
+        "Premium":950, 
+        "Mode":'MLY', 
+        "Last_date":'2017-12-01'
+
+    }
+)
+db.premium.insertOne(
+    {
+        "Policy_Num":458651234, 
+        "Premium":5500, 
+        "Mode":'YLY', 
+        "Last_date":'2020-12-01'
+
+    }
+)
+----unpaid premium table----
+db.createCollection("unpaid_premium")
+db.unpaid_premium.insertOne(
+    {
+    "Policy_Num":123564789, 
+    "Fine":500, 
+    "Lateness":15,
+    }
+)
+db.unpaid_premium.insertOne(
+    {
+    "Policy_Num":284049583, 
+    "Fine":650, 
+    "Lateness":25,
+    }
+)
+db.unpaid_premium.insertOne(
+    {
+    "Policy_Num":524632789, 
+    "Fine":300, 
+    "Lateness":5,
+    }
+)
+db.unpaid_premium.insertOne(
+    {
+    "Policy_Num":955424493, 
+    "Fine":1000, 
+    "Lateness":60,
+    }
+)
+db.unpaid_premium.insertOne(
+    {
+    "Policy_Num":564122879, 
+    "Fine":900, 
+    "Lateness":40,
+    }
+)
